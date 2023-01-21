@@ -24,7 +24,13 @@ export function SumaryTable () {
 
       <div className="grid grid-rows-7 grid-flow-col gap-3">
         {sumaaryDates.map((date, index) => {
-          return <HabitDay key={index}/>
+          return (
+            <HabitDay 
+              key={index} 
+              amount={5} 
+              completed={Math.round(Math.random() * 5)}
+            />
+          )
         })}
 
         {amountDaysToFill > 0 && Array.from({ length: amountDaysToFill}).map((_, i)=>{
