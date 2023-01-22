@@ -1,5 +1,6 @@
 import './styles/global.css'
 import './App.css'
+import './lib/dayjs.ts'
 import { Header } from './components/Header'
 import { SumaryTable } from './components/SummaryTable'
 
