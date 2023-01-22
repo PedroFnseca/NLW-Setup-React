@@ -42,7 +42,7 @@ export function SumaryTable () {
       </div>
 
       <div className="grid grid-rows-7 grid-flow-col gap-3">
-        {sumaaryDates.map((date, index) => {
+        {summary.length > 0 && sumaaryDates.map((date, index) => {
           const dayInSummary = summary.find(day => {
             return dayjs(date).isSame(day.date, 'day')
           })
@@ -51,7 +51,7 @@ export function SumaryTable () {
               key={index}
               date={date}
               amount={dayInSummary?.amount} 
-              completed={dayInSummary?.completed}
+              defaultCompleted={dayInSummary?.completed}
             />
           )
         })}
